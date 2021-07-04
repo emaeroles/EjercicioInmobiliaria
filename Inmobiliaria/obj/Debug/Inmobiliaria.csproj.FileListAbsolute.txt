@@ -1,0 +1,10 @@
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\bin\Debug\Inmobiliaria.exe.config
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\bin\Debug\Inmobiliaria.exe
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\bin\Debug\Inmobiliaria.pdb
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.AssemblyReference.cache
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.FrmInmobiliaria.resources
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.Properties.Resources.resources
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.GenerateResource.cache
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.CoreCompileInputs.cache
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.exe
+D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.pdb

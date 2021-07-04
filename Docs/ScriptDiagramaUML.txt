@@ -1,0 +1,28 @@
+// Inmobiliaria
+
+// Relaciones
+[Persona]^[Propietario]
+[Propietario]<>1-0..*>[Inmueble]
+[Inmobiliaria]<>1-0..*>[Propietario]
+[FrmInmobiliaria]-.->[Propietario]
+[FrmInmobiliaria]-.->[Inmueble]
+[FrmInmobiliaria]++1-1>[Inmobiliaria]
+[Inmobiliaria]-.->[Inmueble]
+[Propietario]-.->[BBDD]
+[Inmueble]-.->[BBDD]
+[Inmobiliaria]-.->[BBDD]
+[FrmInmobiliaria]-.->[BBDD]
+[Inmobiliaria]-.->[Propietario]
+
+// Clases
+[Persona|-nombre; -tipoDoc; -documento; -sexo]
+
+[Propietario|-inmuebles; -idPropietario| +CargaBBDD()]
+
+[Inmueble|-metros; -costoPorMetro; -tipoInmueble; -idPropietario| +CargaBBDD()]
+
+[Inmobiliaria|-propietarios| +Cantidad(); +ValorPromedio(); +Porcentaje(); +MujeresConDepto(); +PropiInmuMasVal(); +PropiLotMasPeque(); +CargarArray()]
+
+[BBDD|-conexion; -comando; -tabla| +LeerBBDD(); +EscibirBBDD()]
+
+[FrmInmobiliaria|-inmobiliaria| -CargarCmbBox(); -ValidarDatos(); -CambioPaneles(); -ToolStripMenuCargarPropietario(); -ToolStripMenuCargarInmueble(); -ToolStripMenuVerEstadisticas(); -BtnCargarPropietario(); -BtnCargarInmueble(); -BtnVerEstadistica(); -BtnHomeCP(); -BtnHomeCI(); -BtnHomeVE()]
