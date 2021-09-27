@@ -10,7 +10,7 @@ namespace Inmobiliaria
 {
     class BBDD
     {
-        SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-U85FE9O;Initial Catalog=inmobiliaria;Integrated Security=True");
+        SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-H8R3LUT;Initial Catalog=inmobiliaria;Integrated Security=True");
         SqlCommand comando = new SqlCommand();
         DataTable tabla; // = new DataTable();
 

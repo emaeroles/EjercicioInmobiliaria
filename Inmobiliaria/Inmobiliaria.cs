@@ -10,18 +10,17 @@ namespace Inmobiliaria
     class Inmobiliaria
     {
         Propietario[] propietarios;
-
         //
-        // Cantidad de Inmuebles por Tipo
+        // Cantidad de Inmuebles por Tipo     11111
         //
-        public int Cantidad(int tipoInmueble)
+        public int CantidadPorTipo(TipoInble tipo)
         {
             int cont = 0;
-            for (int i = 0; i < propietarios.Length; i++)
+            foreach (Propietario propietario in propietarios)
             {
-                for (int j = 0; j < propietarios[i].Inmuebles.Length; j++)
+                foreach (Inmueble inmueble in propietario.Inmuebles)
                 {
-                    if (propietarios[i].Inmuebles[j].TipoInmueble == tipoInmueble)
+                    if (inmueble.TipoInmueble == (int)tipo)
                     {
                         cont++;
                     }
@@ -30,39 +29,89 @@ namespace Inmobiliaria
             return cont;
         }
         //
-        // Valuacion del precio de los Inmuebles por Tipo
+        // Valuacion promedio del precio de los Inmuebles por Tipo     22222
         //
-        public decimal Valuacion(int tipoInmueble)
+        public decimal ValuacionPromTipo(TipoInble tipo)
         {
             decimal resultado = 0;
-            for (int i = 0; i < propietarios.Length; i++)
+            int cont = 0;
+            foreach (Propietario propietario in propietarios)
             {
-                for (int j = 0; j < propietarios[i].Inmuebles.Length; j++)
+                foreach (Inmueble inmueble in propietario.Inmuebles)
                 {
-                    if (propietarios[i].Inmuebles[j].TipoInmueble == tipoInmueble)
+                    if (inmueble.TipoInmueble == (int)tipo)
                     {
-                        resultado += propietarios[i].Inmuebles[j].CostoPorMetro * Convert.ToDecimal(propietarios[i].Inmuebles[j].Metros);
+                        resultado += inmueble.CostoPorMetro * Convert.ToDecimal(inmueble.Metros);
+                        cont++;
                     }
                 }
             }
+            resultado /= cont;
             return decimal.Round(resultado, 2);
         }
         //
-        // Cantidad de Mujeres con Dpartamento
+        // Valuacion de promedio de todos los inmuebles     33333
+        //
+        public decimal ValuacionPromTotal()
+        {
+            decimal resultado = 0;
+            int cont = 0;
+            foreach (Propietario propietario in propietarios)
+            {
+                foreach (Inmueble inmueble in propietario.Inmuebles)
+                {
+                    resultado += inmueble.CostoPorMetro * Convert.ToDecimal(inmueble.Metros);
+                    cont++;
+                }
+            }
+            resultado /= cont;
+            return decimal.Round(resultado, 2);
+        }
+        //
+        // Porcentage de casas     44444
+        //
+        public double PorcentajeDe(TipoInble tipo)
+        {
+            double porcentage;
+
+            int inmuebles = CantidadInmuebles();
+            int casas = CantidadPorTipo(tipo);
+
+            porcentage = casas * 100 / inmuebles;
+
+            return Math.Round(porcentage, 2);
+        }
+        //
+        // Cantidad de Inmuebles     44444 bis
+        //
+        public int CantidadInmuebles()
+        {
+            int cont = 0;
+            foreach (Propietario propietario in propietarios)
+            {
+                foreach (Inmueble inmueble in propietario.Inmuebles)
+                {
+                    cont++;
+                }
+            }
+            return cont;
+        }
+        //
+        // Cantidad de Mujeres con Departamento     55555
         //
         public int CantidadDeMugeresConDepto()
         {
             int cont = 0;
-            for (int i = 0; i < propietarios.Length; i++)
+            foreach (Propietario propietario in propietarios)
             {
-                if (propietarios[i].Sexo == 1)
+                if (propietario.Sexo == 1)
                 {
-                    for (int j = 0; j < propietarios[i].Inmuebles.Length; j++)
+                    foreach (Inmueble inmueble in propietario.Inmuebles)
                     {
-                        if (propietarios[i].Inmuebles[j].TipoInmueble == 2)
+                        if (inmueble.TipoInmueble == (int)TipoInble.Depto)
                         {
                             cont++;
-                            j = propietarios[i].Inmuebles.Length;
+                            break;
                         }
                     }
                 }
@@ -71,73 +120,44 @@ namespace Inmobiliaria
             return cont;
         }
         //
-        // Propietario con el Inmueble Más Grande
+        // Propietario con el Inmueble Más Grande     66666
         //
-        public Propietario PropInnmMasVali()
+        public Propietario PropiConInnmMasVali()
         {
-            Propietario propMas = new Propietario();
-            propMas.Inmuebles = new Inmueble[0];
-            for (int i = 0; i < propietarios.Length; i++)
+            Propietario propiMas = new Propietario();
+
+            foreach (Propietario propietario in propietarios)
             {
-                if ((Convert.ToDecimal(InmuMasVali(propietarios[i]).Metros) * InmuMasVali(propietarios[i]).CostoPorMetro) > (Convert.ToDecimal(InmuMasVali(propMas).Metros) * InmuMasVali(propMas).CostoPorMetro))
+                if (propietario.InmuMasVali().ValorInble() > propiMas.InmuMasVali().ValorInble())
                 {
-                    propMas = propietarios[i];
+                    propiMas = propietario;
                 }
             }
-            return propMas;
+
+            return propiMas;
         }
         //
-        public Inmueble InmuMasVali(Propietario propietario)
+        // Propietario con el Lote Más Pequeño     77777
+        //
+        public Propietario PropiConInmuMasPeque(TipoInble tipo)
         {
-            Inmueble inmuMas = new Inmueble();
-            for (int i = 0; i < propietario.Inmuebles.Length; i++)
+            Propietario propiMen = new Propietario();
+            bool bandera = true;
+
+            foreach (Propietario propietario in propietarios)
             {
-                if ((Convert.ToDecimal(propietario.Inmuebles[i].Metros) * propietario.Inmuebles[i].CostoPorMetro) > (Convert.ToDecimal(inmuMas.Metros) * inmuMas.CostoPorMetro))
+                if (propietario.InmuMasPeque(tipo) != null && bandera == true)
                 {
-                    inmuMas = propietario.Inmuebles[i];
+                    propiMen = propietario;
+                    bandera = false;
+                }
+                else if (propietario.InmuMasPeque(tipo) != null 
+                        && propiMen.InmuMasPeque(tipo).Metros > propietario.InmuMasPeque(tipo).Metros)
+                {
+                    propiMen = propietario;
                 }
             }
-            return inmuMas;
-        }
-        //
-        // Propietario con el Lote Más Pequeño
-        //
-        public Propietario PropLoteMasPeque()
-        {
-            int bandera = 0;
-            Propietario propMen = new Propietario();
-            for (int i = 0; i < propietarios.Length; i++)
-            {
-                if (LoteMasPeque(propietarios[i]).TipoInmueble == 3 && bandera == 0)
-                {
-                    propMen = propietarios[i];
-                    bandera = 1;
-                }
-                else if (LoteMasPeque(propietarios[i]).TipoInmueble == 3 && LoteMasPeque(propietarios[i]).Metros < LoteMasPeque(propMen).Metros)
-                {
-                    propMen = propietarios[i];
-                }
-            }
-            return propMen;
-        }
-        //
-        public Inmueble LoteMasPeque(Propietario propietario)
-        {
-            int bandera = 0;
-            Inmueble inmuMas = new Inmueble();
-            for (int i = 0; i < propietario.Inmuebles.Length; i++)
-            {
-                if(propietario.Inmuebles[i].TipoInmueble == 3 && bandera == 0)
-                {
-                    inmuMas = propietario.Inmuebles[i];
-                    bandera = 1;
-                }
-                else if (propietario.Inmuebles[i].TipoInmueble == 3 && (propietario.Inmuebles[i].Metros < inmuMas.Metros))
-                {
-                    inmuMas = propietario.Inmuebles[i];
-                }
-            }
-            return inmuMas;
+            return propiMen;
         }
         //
         // Cargar Array

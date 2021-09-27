@@ -475,9 +475,9 @@ namespace Inmobiliaria
             this.LblEst6.AutoSize = true;
             this.LblEst6.Location = new System.Drawing.Point(17, 199);
             this.LblEst6.Name = "LblEst6";
-            this.LblEst6.Size = new System.Drawing.Size(212, 13);
+            this.LblEst6.Size = new System.Drawing.Size(207, 13);
             this.LblEst6.TabIndex = 6;
-            this.LblEst6.Text = "6) Propietarios con el inmueble más valioso ";
+            this.LblEst6.Text = "6) Propietario con el inmueble más valioso ";
             // 
             // LblEst5
             // 

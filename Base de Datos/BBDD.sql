@@ -24,6 +24,7 @@ id_persona int
 constraint fk_propietario_personas foreign key(id_propietario)
 	references personas(id_persona),
 )
+
 create table tipos_inmuebles(
 id_tipo_inmueble int primary key identity(1,1),
 tipo_inmueble varchar(30)
@@ -41,6 +42,8 @@ constraint fk_inmuebles_propietario foreign key(id_propietario)
 	references propietarios(id_propietario)
 )
 
+----------- INSERTS TIPOS -------------------------------------------------------------------------
+
 insert into tipos_doc(tipo_doc)
 values ('DNI')
 insert into tipos_doc(tipo_doc)
@@ -55,37 +58,78 @@ values ('Departamento')
 insert into tipos_inmuebles(tipo_inmueble)
 values ('Lote')
 
+----------- INSERTS PROPIETARIOS E INMUEBLES ------------------------------------------------------
+
+--Diego (1)
 insert into personas(nombre, id_tipo_doc, documento, sexo)
-values ('Ema', (select id_tipo_doc from tipos_doc where tipo_doc = 'DNI'), '23084893', 1)
-
-select top 1 id_persona
-from personas
-order by id_persona desc
-
+values('Diego', 1, '28846523', 2)
 insert into propietarios(id_persona)
-values (0)
+values (1)
 
-select metros, costo_por_metro, id_tipo_inmueble, p.id_propietario
-from propietarios p join inmuebles i on p.id_propietario = i.id_propietario
-
-select id_propietario, nombre from propietarios po join personas pe on pe.id_persona = po.id_persona
-
-
-select * from tipos_doc
-select * from tipos_inmuebles
-select * from inmuebles
-select * from propietarios
-select * from personas
-
-
-
+--Casa (1)
 insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
-values (0, 0, 0, 0)
+values (150, 1100, 1, 1)
 
+--Lote (3)
+insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
+values (300, 110, 3, 1)
+
+---------------------------------------------------------------------------------------------------
+--Ramon (2)
 insert into personas(nombre, id_tipo_doc, documento, sexo)
-values('', 0, '', 0)
-
-select top 1 id_persona from personas order by id_persona desc
+values('Ramon', 1, '30465876', 2)
 insert into propietarios(id_persona)
-values(0)
+values (2)
 
+--Departameto (2)
+insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
+values (80, 1500, 2, 2)
+
+--Lote (3)
+insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
+values (250, 130, 3, 2)
+
+---------------------------------------------------------------------------------------------------
+--Sara (3)
+insert into personas(nombre, id_tipo_doc, documento, sexo)
+values('Sara', 1, '33456851', 1)
+insert into propietarios(id_persona)
+values (3)
+
+--Casa (1)
+insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
+values (110, 1200, 1, 3)
+
+--Departameto (2)
+insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
+values (50, 1200, 2, 3)
+
+---------------------------------------------------------------------------------------------------
+--Rocio (4)
+insert into personas(nombre, id_tipo_doc, documento, sexo)
+values('Rocio', 2, '32459741', 1)
+insert into propietarios(id_persona)
+values (4)
+
+--Departameto (2)
+insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
+values (30, 1100, 2, 4)
+
+--Lote (3)
+insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
+values (400, 90, 3, 4)
+
+---------------------------------------------------------------------------------------------------
+--Eliana (5)
+insert into personas(nombre, id_tipo_doc, documento, sexo)
+values('Eliana', 1, '12856849', 1)
+insert into propietarios(id_persona)
+values (5)
+
+--Casa (1)
+insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
+values (120, 1000, 1, 5)
+
+--Lote (3)
+insert into inmuebles(metros, costo_por_metro, id_tipo_inmueble, id_propietario)
+values (250, 125, 3, 5)

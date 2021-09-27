@@ -13,6 +13,14 @@ namespace Inmobiliaria
         private int tipoInmueble;
         private int idPropietario;
 
+        public Inmueble()
+        {
+            metros = 0;
+            costoPorMetro = 0;
+            tipoInmueble = 0;
+            idPropietario = 0;
+        }
+
         public double Metros
         {
             get => metros;
@@ -45,6 +53,11 @@ namespace Inmobiliaria
                 inmueble.idPropietario+")";
 
             bbdd.EscrituraBBDD(consulta);
+        }
+
+        public decimal ValorInble()
+        {
+            return costoPorMetro * Convert.ToDecimal(metros);
         }
 
         public override string ToString()

@@ -14,6 +14,7 @@ namespace Inmobiliaria
     {
         Inmobiliaria inmobiliaria = new Inmobiliaria();
         int cambioPanel = 0;
+
         public FrmInmobiliaria()
         {
             InitializeComponent();
@@ -128,34 +129,32 @@ namespace Inmobiliaria
             switch (NudEstadisticas.Value)
             {
                 case 1:
-                    LblInfo.Text = "La cantidad de casas es: " + inmobiliaria.Cantidad(1)
-                         + "\nLa cantidad de departamentos es: " + inmobiliaria.Cantidad(2)
-                         + "\nLa cantidad de lotes es: " + inmobiliaria.Cantidad(3);
+                    LblInfo.Text = "La cantidad de casas es: " + inmobiliaria.CantidadPorTipo(TipoInble.Casa)
+                         + "\nLa cantidad de departamentos es: " + inmobiliaria.CantidadPorTipo(TipoInble.Depto)
+                         + "\nLa cantidad de lotes es: " + inmobiliaria.CantidadPorTipo(TipoInble.Lote);
                     break;
                 case 2:
-                    LblInfo.Text = "La valuacion promedio de las casas es: " + inmobiliaria.Valuacion(1)
-                         + "\nLa valuacion promedio de los departamentos es: " + inmobiliaria.Valuacion(2)
-                         + "\nLa valuacion promedio de los lotes es: " + inmobiliaria.Valuacion(3);
+                    LblInfo.Text = "La valuacion promedio de las casas es: " + inmobiliaria.ValuacionPromTipo(TipoInble.Casa) + " U$S"
+                         + "\nLa valuacion promedio de los departamentos es: " + inmobiliaria.ValuacionPromTipo(TipoInble.Depto) + " U$S"
+                         + "\nLa valuacion promedio de los lotes es: " + inmobiliaria.ValuacionPromTipo(TipoInble.Lote) + " U$S";
                     break;
                 case 3:
-                    LblInfo.Text = "La valuacion promedio de los inmuebles es: " + 
-                        (inmobiliaria.Valuacion(1) + inmobiliaria.Valuacion(2) + inmobiliaria.Valuacion(3));
+                    LblInfo.Text = "La valuacion promedio de los inmuebles es: " + inmobiliaria.ValuacionPromTotal() + " U$S";
                     break;
                 case 4:
-                    double resultado = (Convert.ToDouble(inmobiliaria.Cantidad(1)) * 100 / (Convert.ToDouble(inmobiliaria.Cantidad(1) + inmobiliaria.Cantidad(2) + inmobiliaria.Cantidad(3))));
-                    LblInfo.Text = "El porcentage de casas es: " + Math.Truncate(resultado * 100) / 100;
+                    LblInfo.Text = "El porcentage de casas es: " + inmobiliaria.PorcentajeDe(TipoInble.Casa) + " %";
                     break;
                 case 5:
                     LblInfo.Text = "La cantidad de mujeres con departamento es: " + inmobiliaria.CantidadDeMugeresConDepto();
                     break;
                 case 6:
-                    LblInfo.Text = "El propietario con el inmueble más valioso es: " + inmobiliaria.PropInnmMasVali().Nombre;
+                    LblInfo.Text = "El propietario con el inmueble más valioso es: " + inmobiliaria.PropiConInnmMasVali().Nombre;
                     break;
                 case 7:
-                    LblInfo.Text = "El propietarios con el loto más pequeño es: " + inmobiliaria.PropLoteMasPeque().Nombre;
+                    LblInfo.Text = "El propietarios con el loto más pequeño es: " + inmobiliaria.PropiConInmuMasPeque(TipoInble.Lote).Nombre;
                     break;
                 default:
-
+                    LblInfo.Text = "Null";
                     break;
             }
         }

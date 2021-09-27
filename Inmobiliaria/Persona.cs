@@ -14,6 +14,15 @@ namespace Inmobiliaria
         private int sexo;
         private int idPersona;
 
+        public Persona()
+        {
+            nombre = "";
+            tipoDoc = 0;
+            documento = "";
+            sexo = 0;
+            idPersona = 0;
+        }
+
         public string Nombre
         {
             get => nombre;

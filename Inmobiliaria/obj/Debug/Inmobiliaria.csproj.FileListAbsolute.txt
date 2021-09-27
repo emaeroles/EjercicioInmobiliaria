@@ -8,3 +8,23 @@ D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliari
 D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.CoreCompileInputs.cache
 D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.exe
 D:\TUP\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.pdb
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\bin\Debug\Inmobiliaria.exe.config
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\bin\Debug\Inmobiliaria.exe
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\bin\Debug\Inmobiliaria.pdb
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.AssemblyReference.cache
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.FrmInmobiliaria.resources
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.Properties.Resources.resources
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.GenerateResource.cache
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.CoreCompileInputs.cache
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.exe
+C:\Users\ema\Documents\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.pdb
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\bin\Debug\Inmobiliaria.exe.config
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\bin\Debug\Inmobiliaria.exe
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\bin\Debug\Inmobiliaria.pdb
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.AssemblyReference.cache
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.FrmInmobiliaria.resources
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.Properties.Resources.resources
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.GenerateResource.cache
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.CoreCompileInputs.cache
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.exe
+C:\Users\ema\Documents\Mis Documentos\TUP\AA 1º Cuatrimestre\Programacion 1\Ejercicios\Inmobiliaria\Inmobiliaria\obj\Debug\Inmobiliaria.pdb
